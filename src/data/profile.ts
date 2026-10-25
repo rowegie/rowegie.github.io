@@ -4,7 +4,7 @@
 
 // Company and project names are shown as text only: logos were removed on
 // purpose, since using them can need the owner's permission.
-// Stock and Transfer's client (Aboitiz), Traidify's new name (Lumitrade),
+// Stock and Transfer's client (Aboitiz), Traidify's new name (LumiTrade),
 // BaseUp's new name (Yodelle) and the BBBolig dashboard project came from
 // Rowegie; none of them is on the resume.
 
@@ -98,7 +98,7 @@ export const skillGroups: SkillGroup[] = [
 ]
 
 // Tripletex, Gmail and Google Calendar (BBBolig) and Polygon.io and the FRED API
-// (Traidify/Lumitrade) came from Rowegie; they aren't on the resume.
+// (Traidify/LumiTrade) came from Rowegie; they aren't on the resume.
 export const integrations = [
   'Sage',
   'SAP',
@@ -157,9 +157,9 @@ export const projects: Project[] = [
     site: { label: 'yodelle.us', url: 'https://www.yodelle.us/' },
   },
   {
-    name: 'Traidify (now Lumitrade)',
+    name: 'Traidify (now LumiTrade)',
     summary:
-      'A platform that helps people with financial decisions such as investing in stocks and crypto.',
+      'A financial wellness platform designed to empower individuals to invest and trade with clarity and confidence—regardless of experience level.',
     role: 'Backend Engineer',
     work: 'REST APIs, integrations with Polygon.io and the FRED API, deployments, server optimization, and functional specifications for new features.',
     stack: [
@@ -204,10 +204,11 @@ export const experience: Role[] = [
     start: { year: 2025, month: 6 },
     end: { year: 2026, month: 6 },
     duties: [
-      'Developed backend features for an ERP used in vitamin and supplement manufacturing, across R&D, batch processing, quality control, inventory, purchasing, sales and planning.',
-      'Built an independent e-signature service using AWS KMS for document signing and key management.',
+      "Developed backend features across a vitamin and supplement manufacturer's ERP, spanning R&D, batch processing, quality control, inventory, purchasing, sales and planning.",
+      'Built a standalone e-signature service on AWS KMS that handles document signing and key management.',
       // Rowegie set the pipelines up (the resume says "took part in").
-      'Set up the automated CI/CD deployment pipelines with GitHub Actions for test, staging and production, and managed AWS resources with Terraform.',
+      'Set up automated CI/CD pipelines in GitHub Actions that deploy to test, staging and production.',
+      'Provisioned and managed AWS infrastructure (ECS, ECR, ALB, S3, RDS, KMS) with Terraform.',
     ],
     tech: ['Python', 'Django', 'FastAPI', 'Terraform', 'GitHub Actions', 'AWS', 'Cursor', 'Claude Code'],
   },
@@ -218,9 +219,9 @@ export const experience: Role[] = [
     start: { year: 2024, month: 2 },
     end: { year: 2025, month: 4 },
     duties: [
-      'Created REST APIs for the frontend and built UIs with Vue.js.',
-      'Integrated with other APIs, including Sage and SAP.',
-      'Fixed bugs reported by customers in JIRA.',
+      'Built REST APIs and the Vue.js interfaces that use them.',
+      'Integrated the platform with third-party systems, including Sage and SAP.',
+      'Resolved customer-reported issues tracked in JIRA.',
     ],
     tech: ['Python', 'Django', 'Django REST Framework', 'Vue.js', 'jQuery', 'Electron'],
   },
@@ -233,10 +234,10 @@ export const experience: Role[] = [
     // The Lambda, Step Functions and feature-ownership duties came from Rowegie;
     // the resume lists only the bug fixing, stand-ups and unit tests.
     duties: [
-      'Built new features in Python, taking them from implementation through to deployment.',
-      'Wrote AWS Lambda functions and debugged AWS Step Functions workflows.',
-      'Fixed bugs assigned in JIRA and wrote unit tests.',
-      'Took part in daily stand-ups and sprint planning.',
+      'Delivered Python features end to end, from implementation to deployment.',
+      'Developed AWS Lambda functions and debugged AWS Step Functions workflows.',
+      'Fixed bugs tracked in JIRA and wrote unit tests.',
+      'Worked in an agile team with daily stand-ups and sprint planning.',
     ],
     tech: [
       'Python',
@@ -252,8 +253,8 @@ export const experience: Role[] = [
     start: { year: 2023, month: 2 },
     end: { year: 2023, month: 6 },
     duties: [
-      'Built new features such as recipe weighing with Django, HTML, CSS and JavaScript.',
-      'Integrated with Sage and fixed customer-reported bugs.',
+      'Built new features, including recipe weighing, with Django, HTML, CSS and JavaScript.',
+      'Integrated the platform with Sage and resolved customer-reported issues.',
     ],
     tech: ['Python', 'Django', 'Django REST Framework', 'JavaScript', 'jQuery'],
   },
@@ -265,9 +266,10 @@ export const experience: Role[] = [
     start: { year: 2019, month: 1 },
     end: { year: 2023, month: 2 },
     duties: [
-      'Designed features such as payments, email sending and scheduled tasks.',
-      'Integrated online payments (Xendit, PayMongo) and point-of-sale systems (Square, StoreHub).',
-      'Customized Odoo modules such as point of sale and accounting, fixed bugs and wrote unit tests.',
+      'Designed features including payments, email delivery and scheduled tasks.',
+      'Integrated payment gateways (Xendit, PayMongo) and point-of-sale systems (Square, StoreHub).',
+      "Customized Odoo's point-of-sale and accounting modules.",
+      'Fixed bugs found through error tracking and customer reports, and wrote unit tests.',
     ],
     tech: ['Python', 'Django', 'Django REST Framework', 'Odoo', 'pytest', 'AWS', 'PostgreSQL'],
   },
@@ -278,9 +280,9 @@ export const experience: Role[] = [
     start: { year: 2017, month: 3 },
     end: { year: 2018, month: 12 },
     duties: [
-      'Created RESTful APIs for the frontend.',
-      'Tested the web application before deployment, including automated tests with Selenium.',
-      'Fixed bugs reported by customers.',
+      'Built RESTful APIs for the web frontend.',
+      'Tested releases before deployment, including automated browser tests with Selenium.',
+      'Resolved customer-reported bugs.',
     ],
     tech: ['Python', 'Django', 'Django REST Framework', 'PostgreSQL', 'Selenium'],
   },
@@ -291,7 +293,7 @@ export const experience: Role[] = [
     start: { year: 2016, month: 1 },
     end: { year: 2017, month: 3 },
     duties: [
-      'Built DLLs for Kyocera Net Viewer and designed the automation scripts that build them.',
+      'Built DLLs for Kyocera Net Viewer and wrote the scripts that automate their builds.',
     ],
     tech: ['Python', 'Perl', 'Groovy', 'PowerShell', 'Bash'],
   },

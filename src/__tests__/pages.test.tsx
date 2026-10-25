@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { brandIcon } from '../data/brandIcons'
 import { sections } from '../data/sections'
+import { msUntilThemeChange, timeTheme } from '../lib/theme'
 import { clientFeedback, experience, integrations, profile, projects, skillGroups } from '../data/profile'
 import { formatYearMonth } from '../lib/dates'
 import ContactPage from '../pages/ContactPage'
@@ -233,18 +234,30 @@ describe('theme switch', () => {
     localStorage.clear()
   })
 
-  it('defaults to System and remembers Light or Dark', async () => {
+  it('defaults to Auto (time of day) and remembers Light or Dark', async () => {
     const user = userEvent.setup()
     render(<HomePage />)
-    expect(screen.getByRole('radio', { name: 'System' })).toBeChecked()
+    const auto = screen.getByRole('radio', { name: 'Auto (time of day)' })
+    expect(auto).toBeChecked()
+    expect(document.documentElement.dataset.theme).toBe(timeTheme())
 
     await user.click(screen.getByRole('radio', { name: 'Dark' }))
     expect(document.documentElement.dataset.theme).toBe('dark')
     expect(localStorage.getItem('theme')).toBe('dark')
 
-    await user.click(screen.getByRole('radio', { name: 'System' }))
-    expect(document.documentElement.dataset.theme).toBeUndefined()
+    await user.click(auto)
     expect(localStorage.getItem('theme')).toBeNull()
+    expect(document.documentElement.dataset.theme).toBe(timeTheme())
+  })
+
+  it('is light from 6:00 to 18:00 and dark otherwise', () => {
+    const at = (h: number, m = 0) => new Date(2026, 9, 25, h, m)
+    expect(timeTheme(at(5, 59))).toBe('dark')
+    expect(timeTheme(at(6))).toBe('light')
+    expect(timeTheme(at(17, 59))).toBe('light')
+    expect(timeTheme(at(18))).toBe('dark')
+    expect(msUntilThemeChange(at(17, 30))).toBe(30 * 60 * 1000)
+    expect(msUntilThemeChange(at(23))).toBe(7 * 60 * 60 * 1000)
   })
 
   it('starts from a saved choice', () => {

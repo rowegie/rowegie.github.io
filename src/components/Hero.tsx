@@ -1,6 +1,7 @@
-import { profile, profileLinks } from '../data/profile'
+import { profile } from '../data/profile'
 import { sectionPath } from '../lib/paths'
 import ProfilePhoto from './ProfilePhoto'
+import SocialLinks from './SocialLinks'
 
 export default function Hero() {
   return (
@@ -18,25 +19,7 @@ export default function Hero() {
       </div>
       <p className="hero__statement">{profile.positioning}</p>
       {/* Smaller screens only; on wide screens the sidebar carries these. */}
-      <ul className="hero__links" aria-label="Profiles">
-        {profileLinks.map((link) => (
-          <li key={link.url}>
-            <a href={link.url} target="_blank" rel="noopener noreferrer me">
-              {link.kind === 'github' ? 'github' : link.label.toLowerCase()}
-              <span className="hero__links-arrow" aria-hidden="true">
-                ↗
-              </span>
-              {link.note && (
-                <>
-                  {' '}
-                  <span className="hero__links-note">{link.note}</span>
-                </>
-              )}{' '}
-              <span className="visually-hidden">(opens in a new tab)</span>
-            </a>
-          </li>
-        ))}
-      </ul>
+      <SocialLinks className="hero__social" />
       <div className="hero__actions">
         <a className="button button--primary" href={`mailto:${profile.email}`}>
           Email me

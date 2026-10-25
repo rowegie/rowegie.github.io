@@ -8,11 +8,19 @@
     <meta name="theme-color" content="#FAFBFA" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#121A21" media="(prefers-color-scheme: dark)" />
     <script>
-      // Apply a saved light/dark choice before first paint (see src/lib/theme.ts).
-      try {
-        var t = localStorage.getItem('theme')
-        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t
-      } catch (e) {}
+      // Set the theme before first paint (see src/lib/theme.ts): a saved Light or
+      // Dark choice, otherwise Auto: light from 6:00 to 18:00 local time.
+      ;(function () {
+        var t
+        try {
+          t = localStorage.getItem('theme')
+        } catch (e) {}
+        if (t !== 'light' && t !== 'dark') {
+          var h = new Date().getHours()
+          t = h >= 6 && h < 18 ? 'light' : 'dark'
+        }
+        document.documentElement.dataset.theme = t
+      })()
     </script>
     <title>Rowegie P. Lambojon | Backend-focused full-stack developer</title>
     <meta

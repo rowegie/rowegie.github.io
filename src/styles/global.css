@@ -716,37 +716,15 @@ html {
   font-size: var(--step--1);
 }
 
-.hero__links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 1rem;
-  margin-top: 1.25rem;
-  padding: 0;
-  list-style: none;
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
+/* Phones and tablets: LinkedIn, Upwork and GitHub as icons under the intro.
+   On wide screens the sidebar carries these links instead. */
+.hero__social {
+  margin: 0.75rem 0 0 -0.5rem;
 }
 
-.hero__links a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  color: var(--muted);
-  text-decoration: none;
-}
-
-.hero__links a:hover {
-  color: var(--ink);
-}
-
-.hero__links-arrow {
-  margin-left: 0.3em;
-  font-size: 0.75rem;
-}
-
-.hero__links-note {
-  margin-left: 0.4em;
-  font-size: 0.75rem;
+.hero__social .social-links__icon {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 /* Phones and tablets: a large photo on top, then the name and title. */
@@ -759,13 +737,7 @@ html {
     margin-top: 1.25rem;
   }
 
-  .hero__links {
-    margin-top: 0.75rem;
-  }
 
-  .hero__links a {
-    min-height: 2.25rem;
-  }
 
   .hero__location {
     margin-top: 1rem;
@@ -780,12 +752,11 @@ html {
   .hero__photo {
     align-self: center;
     width: min(10rem, 45%);
-    border-radius: 12px;
   }
 }
 
 @media (min-width: 64rem) {
-  .hero__links {
+  .hero__social {
     display: none;
   }
 }

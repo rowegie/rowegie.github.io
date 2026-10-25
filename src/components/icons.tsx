@@ -41,11 +41,12 @@ export function MailIcon({ className }: IconProps) {
   )
 }
 
-export function MonitorIcon({ className }: IconProps) {
+// Half light, half dark: the time-of-day (Auto) theme.
+export function AutoThemeIcon({ className }: IconProps) {
   return (
     <Svg className={className}>
-      <rect x="3" y="4" width="18" height="12" rx="2" />
-      <path d="M8 20h8M12 16v4" />
+      <circle cx="12" cy="12" r="8" />
+      <path d="M12 4a8 8 0 0 1 0 16Z" fill="currentColor" stroke="none" />
     </Svg>
   )
 }

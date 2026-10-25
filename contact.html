@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#FAFBFA" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121A21" media="(prefers-color-scheme: dark)" />
+    <script>
+      // Apply a saved light/dark choice before first paint (see src/lib/theme.ts).
+      try {
+        var t = localStorage.getItem('theme')
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t
+      } catch (e) {}
+    </script>
+    <title>Contact | Rowegie P. Lambojon</title>
+    <meta
+      name="description"
+      content="Get in touch with Rowegie P. Lambojon, a backend-focused full-stack developer based in Lapu-Lapu City, Cebu, Philippines."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Contact | Rowegie P. Lambojon" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <p>Rowegie P. Lambojon, backend-focused full-stack developer in Lapu-Lapu City, Cebu, Philippines.</p>
+      <p>Email: <a href="mailto:rowegie.lambojon@gmail.com">rowegie.lambojon@gmail.com</a></p>
+    </noscript>
+    <script type="module" src="/src/contact.tsx"></script>
+  </body>
+</html>

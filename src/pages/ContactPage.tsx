@@ -20,7 +20,7 @@ export default function ContactPage() {
               </h1>
             </div>
             <p className="contact-page__intro">
-              Email is the best way to reach me, whether it’s about a role, a project, or a question
+              Email is the best way to reach me, whether it’s about a role, a project or a question
               about my experience.
             </p>
             <ContactDetails />

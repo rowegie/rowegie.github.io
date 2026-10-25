@@ -128,7 +128,7 @@ export default function SiteSidebar({ current }: Props) {
         </nav>
         <div className="sidebar__foot">
           <ThemeSwitch />
-          <p className="sidebar__reach">For work &amp; everything else, reach me at</p>
+          <p className="sidebar__reach">For work or anything else, reach me at</p>
           <a className="sidebar__email" href={`mailto:${profile.email}`}>
             <MailIcon className="sidebar__icon" />
             {profile.email}

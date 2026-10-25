@@ -20,9 +20,9 @@ export default function About() {
         <div className="highlights__item">
           <dt>Rated {clientFeedback.rating.toFixed(1)} by a client</dt>
           <dd>
-            Rated {clientFeedback.rating.toFixed(1)} on {clientFeedback.platform} for the manufacturing ERP
-            work, and endorsed by the client as a{' '}
-            {clientFeedback.endorsements.join(' and ')}.{' '}
+            On {clientFeedback.platform}, for the manufacturing ERP work, with client endorsements
+            for{' '}
+            {clientFeedback.endorsements.map((e) => `“${e}”`).join(' and ')}.{' '}
             <a className="external-link" href={clientFeedback.url} target="_blank" rel="noopener noreferrer">
               View {clientFeedback.platform} profile
               <ExternalLinkIcon className="external-link__icon" />{' '}

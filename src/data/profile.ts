@@ -94,6 +94,8 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   { name: 'Frontend', items: ['Angular', 'Vue.js', 'React', 'JavaScript', 'HTML', 'CSS'] },
+  // Cursor and Claude Code are on the resume (Jetpack Shipping); VS Code came from Rowegie.
+  { name: 'AI-assisted development', items: ['Claude Code', 'Cursor', 'VS Code'] },
   { name: 'Operating systems', items: ['Linux', 'Ubuntu', 'macOS'] },
 ]
 

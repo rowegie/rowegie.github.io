@@ -5,6 +5,7 @@
 import awsIcon from '../assets/skills/aws.png'
 import drfIcon from '../assets/skills/django-rest-framework.png'
 import powershellIcon from '../assets/skills/powershell.png'
+import vscodeIcon from '../assets/skills/vscode.png'
 import paymongoIcon from '../assets/integrations/paymongo.png'
 import polygonIcon from '../assets/integrations/polygon.png'
 import storehubIcon from '../assets/integrations/storehub.png'
@@ -56,6 +57,8 @@ const ICONS: Record<string, BrandIcon> = {
   AWS: { kind: 'image', src: awsIcon },
   // PowerShell isn't in simple-icons; this is the icon from the PowerShell GitHub repo.
   PowerShell: { kind: 'image', src: powershellIcon },
+  // VS Code isn't in simple-icons; this is the icon from code.visualstudio.com.
+  'VS Code': { kind: 'image', src: vscodeIcon },
   'Django REST Framework': { kind: 'image', src: drfIcon },
   PayMongo: { kind: 'image', src: paymongoIcon },
   StoreHub: { kind: 'image', src: storehubIcon },

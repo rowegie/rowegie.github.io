@@ -471,6 +471,27 @@ html {
   height: 1rem;
 }
 
+/* Keep the footer at the bottom of the screen on short pages (like Contact):
+   the page column fills at least the viewport and the main content grows to
+   take up any spare height. Longer pages scroll as usual. */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.site-content {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+.site-content > main {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
 .site-footer {
   margin-top: 4rem;
   border-top: 1px solid var(--rule);
